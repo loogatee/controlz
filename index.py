@@ -26,8 +26,6 @@ from google.appengine.api import images
 
 
 template_dir      = os.path.join(os.path.dirname(__file__),'templates')
-#jinja_environment = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir), autoescape = True)
-
 jinja_environment = Environment(loader=FileSystemLoader(template_dir), autoescape = True)
 
 

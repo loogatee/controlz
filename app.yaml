@@ -1,6 +1,6 @@
 
-runtime: python27
-threadsafe: no
+runtime: python39
+entrypoint: gunicorn -b :$PORT main:app
 
 handlers:
 - url: /css
@@ -9,5 +9,8 @@ handlers:
 - url: /img
   static_dir: img
 
+- url: /staticjs
+  static_dir: staticjs
+
 - url: /.*
-  script: index.py
+  script: auto
